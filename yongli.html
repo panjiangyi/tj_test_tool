@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>API自动化平台</title>
+  <link href="static/css/bootstrap.min.css"  rel="stylesheet">
+  <link href="static/css/amazeui.min.css"  rel="stylesheet">
+  <link href="static/css/admin.css"  rel="stylesheet">
+  <link href="static/css/app.css"  rel="stylesheet">
+  <link href="static/css/style.css"  rel="stylesheet">
+  <link rel="icon" href="/static/img/logo.png" type="image/x-icon"> 
+</head>
+<body style='background-color: papayawhip;'>
+  <header class="am-topbar am-topbar-inverse admin-header">
+    <div class="am-topbar-brand">
+      <a href="javascript:;" class="tpl-logo">
+        <img src="/static/img/logo.png" alt="">
+      </a>
+    </div>
+  </div>
+</header>
+<div class="tpl-page-container tpl-page-header-fixed">
+<div class="tpl-left-nav tpl-left-nav-hover">
+    <div class="tpl-left-nav-title">
+    </div>
+    <div class="tpl-left-nav-list">
+      <ul class="tpl-left-nav-menu">
+        <li class="tpl-left-nav-item">
+          <a href="../jiage1/index.html" class="nav-link active">
+            <i class="am-icon-home"></i>
+            <span>首页</span>
+          </a>
+        </li>
+        <li class="tpl-left-nav-item">
+          <a href="../jiage1/project.html" class="nav-link tpl-left-nav-link-list">
+            <i class="am-icon-bar-chart"></i>
+            <span>项目</span>
+          </a>
+        </li>
+        <li class="tpl-left-nav-item">
+          <a href="../jiage1/interface.html" class="nav-link tpl-left-nav-link-list">
+            <i class="am-icon-wpforms"></i>
+            <span>接口</span>
+          </a>
+        </li>
+        <li class="tpl-left-nav-item">
+          <a href="../jiage1/yongli.html" class="nav-link tpl-left-nav-link-list">
+            <i class="am-icon-key"></i>
+            <span>测试用例</span>
+          </a>
+        </li>
+        <li class="tpl-left-nav-item">
+          <a href="../jiage1/test_rep.html" class="nav-link tpl-left-nav-link-list">
+            <i class="glyphicon glyphicon-book"></i>
+            <span>测试报告</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  
+
+  <div class="tpl-content-wrapper">
+    <div class="tpl-content-page-title">
+     
+    </div>
+    <div class="tpl-portlet-components">
+      <div class="portlet-title">
+        <div class="caption font-green bold">
+          <span class="am-icon-code"></span> 用例
+        </div>
+      </div>
+      
+
+
+      <form method="POST" action="../jiage1/ser_yongli.html">
+       <strong  style="margin-right: 10px;margin-left: 10px">项目</strong><input type="text" name="project" placeholder="查询所属项目">
+       <span></span>
+       <input type="submit" value="查询" class="btn am-btn-success btn-default">
+     </form>
+     <form method="POST" action="/duoyongli">
+      <div style="margin-top: 10px">
+       <input id="btn3" type="button" name="" class="am-btn am-btn-default am-btn-success" value="添加">
+       <input type="button" name="" class="am-btn am-btn-default am-btn-success" value="导入">
+       </div>
+       <div id="cd-popup3" class="cd-popup">
+          <div class="reg_div">
+            <form action="">
+            <div class="title"><span id="close3" class="close"></span></div>
+            <ul class="reg_ul">
+              <li>
+                  <span>所属接口：</span>
+                  <input type="text" name="" value="" placeholder="请输入接口" class="reg_user">
+              </li>
+              <li>
+                  <span>用例名称：</span>
+                  <input type="password" name="" value="" placeholder="请输入名称" class="reg_password">
+              </li>
+              <li>
+                  <span>用例编号：</span>
+                  <input type="password" name="" value="" placeholder="请输入编号" class="reg_password">
+              </li>
+              <li>
+                  <span>用例描述：</span>
+                  <textarea name="" id="" cols="30" rows="10" placeholder="请输入描述"></textarea>
+              </li>
+              <li>
+                  <span>请求参数：</span>
+                  <input type="password" name="" value="" placeholder="请输入参数" class="reg_confirm">
+              </li>
+              <li>
+                  <span>断言方法：</span>
+                  <input type="password" name="" value="" placeholder="请输入方法" class="reg_confirm">
+              </li>
+              <li>
+                  <span>是否启用：</span>
+                  <input type="text" name="" value="" placeholder="是" class="reg_email">
+              </li>
+              <li>
+                <button type="reset" name="reset" class=" btn red_button">重置</button>
+                <button type="submit" name="submit" class="red_button">确定</button>
+              </li>
+            </ul>
+            </form>
+         </div>
+        </div>
+       <table>
+        <thead>
+          <tr>
+            <th></th>
+            <th>所属接口</th>
+            <th>用例名称</th>
+            <th>用例编号</th>
+            <th>用例描述</th>
+            <th>请求参数</th>
+            <th>断言方法</th>
+            <th>是否启用</th>
+            <th>添加时间</th>
+            <th>操作</th>
+          </tr>
+        </thead>
+        <tbody>
+          
+          <tr>
+            <td><input type="checkbox"  name="yongli" value="3"></td>
+            <td>昨夜西风凋碧树</td>
+            <td>test0</td>
+            <td>http://httpbin.org/get</td>
+            <td>GET</td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td>{&#39;reason&#39;: &#39;APPKEY错误或为空 &#39;, &#39;result&#39;: None, &#39;error_code&#39;: 10001}
+            {&#39;reason&#39;: &#39;APPKEY错误或为空 &#39;, &#39;result&#39;: None, &#39;error_code&#39;: 10001}</td>
+            <td>
+                <a href="/edit_case/3"><input type="button" value="编辑" class="btn am-btn-success btn-default"></a>
+                <a href="/delete_case/3"><input type="button" value="删除" class="btn btn-default"></a>
+              </td>
+            </tr>
+            
+          </tbody>
+        </table>
+      </form>
+      <p class="pagination" style="margin-left: 24%;">
+        
+      <ul class="pagination">
+       <li><a href="#">&laquo;</a></li>
+       <li class="active"><a href="#">1</a></li>
+       <li class="disabled"><a href="#">2</a></li>
+       <li><a href="#">3</a></li>
+       <li><a href="#">4</a></li>
+       <li><a href="#">5</a></li>
+       <li><a href="#">&raquo;</a></li>
+    </ul>
+      </p>
+
+    </div>
+<script src="static/js/jquery.js"></script> 
+<script src="static/js/jia.js"></script>   
+    
+  </body>
+  </html>
